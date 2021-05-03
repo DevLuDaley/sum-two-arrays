@@ -1,7 +1,5 @@
-// )
 // ! [x]create inputs to accept array1 and array2
 // ! []accept an input && confirm or convert it to an array
-
 
 //+ accept inputs (2)
 //+ confirm data type
@@ -11,9 +9,8 @@
 //+ add 2 numbers
 //+ return new sumOfNumbers in an array 
 
-
-
 function addArrays(arr1, arr2) {
+    console.clear()
     if(arr1 == [] && arr2 == []){
         return []
     }
@@ -21,16 +18,24 @@ function addArrays(arr1, arr2) {
     // let numnum = parseInt(arr1.join(''))
 
     // ! convert input(string) to a number
-    let numnum = parseInt(arr1)
-    console.log(`🚀 ~ file: AddArrays.js ~ line 13 ~ addArrays ~ numnum`, numnum)
+    let parse1 = parseInt(arr1)
+    console.log(`🚀 ~ file: AddArrays.js ~ line 25 ~ addArrays ~ parse1 =>`, parse1)
+    console.log(`🚀 ~ file: AddArrays.js ~ line 27 ~ addArrays ~ typ of parse1`,typeof(parse1))
+    console.log(`🚀 ~ file: AddArrays.js ~ line 27 ~ addArrays ~ typ of parse1`, isNaN(parse1))
 
+    // let parse1Join  = parse1.join('')
+    // console.log(`🚀 ~ file: AddArrays.js ~ line 29 ~ addArrays ~ parse1Join`, parse1Join)
     // let remBraceL1 = arr1.replace(/\[/i, "")
     // let remBraceL2 = (arr1.replace(/]/i, "")
 
     // var re = /\([^)]*\)|\[[^\]]*\]/g
     
     // console.log(arr1.replace(/\[/i, ""))
-    // console.log(arr1.replace(/]/i, ""))
+    let deleteBracketL = /\[,""/g;
+
+    // console.log('deleteBracketL =>', arr1.replace(deleteBracketL))
+    // console.log(arr1.replace(/\[, ""/))
+    // console.log(arr1.replace(/\[, ""/))
     //! create an array with filtered-out NANs
     //! map over the !NANs && convert them to numbers
     
