@@ -1,23 +1,19 @@
 // does the sum of (all but last element) in array == the last element?
 // identify last number \\ largest number
 function ArraySum(arr) {
-    // ! construct/declare necessary variables
     let largestNum = 0;
     let total = 0;
     let check = false;
 
     let num;
-    // ! iterate over the array adding each number to the total container
         // for (num = 0; num < arr.length; num++) {
         arr.forEach(num => {
             // total+= num; 
             total = total + num;
-    // ! assign the highest num the 'largest' label
             if(num > largestNum){
                 largestNum = num;
                 // console.log(`🚀 ~ file: arraySum.js ~ line 14 ~ ArraySum ~ largestNum`, largestNum)
             }
-            
             if (largestNum === total - largestNum ) {
                 // console.log("TRUUUU");
                 check = true;

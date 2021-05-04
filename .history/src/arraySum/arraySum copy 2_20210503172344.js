@@ -2,7 +2,6 @@ function ArraySum(arr) {
     let greatest = 0;
     let sum = 0;
     let check = false;
-    
     arr.forEach(number => {
         sum = sum + number;
         if(number > greatest) {
